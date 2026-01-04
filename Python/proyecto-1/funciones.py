@@ -1,4 +1,6 @@
-#numero de veces que dara la vuelt
+#ALGORITMOS DE ORDENAMIENTO
+
+#numero de veces que dara la vuelta
 
 def bubble_sort(list):
     for i in range(len(list)):
@@ -10,5 +12,22 @@ def bubble_sort(list):
                 list[j] = list[j+1]
                 list[j+1] = temp
     return list
+
+
+
+def insertion_sort(list):
+
+    
+    for i in range(1,len(list)):
+
+        actual = list[i]
+        anterior_ordenado= i-1
+
+        while anterior_ordenado >= 0 and list[anterior_ordenado] > actual:
+            list[anterior_ordenado+1] = list[anterior_ordenado]
+            anterior_ordenado -= 1
+            list[anterior_ordenado + 1] = actual
+    return list
+            
 
 
