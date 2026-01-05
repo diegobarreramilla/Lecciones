@@ -11,7 +11,7 @@ def bubble_sort(list):
                 temp = list[j]
                 list[j] = list[j+1]
                 list[j+1] = temp
-    return list
+    return list 
 
 
 

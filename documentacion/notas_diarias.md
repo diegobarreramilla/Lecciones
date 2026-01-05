@@ -11,5 +11,7 @@ falta incluir tiempos big(O)
 
 
     4/1/2026
+segundo dia empezamos a entender los fundamentales de SQl como funciona y como se comprata al igual que familiarizarnos con el cliente 
 
+aprendimos ademas statemnets basicos de SQL y usar el workbench mejor 
 
