@@ -1,33 +1,49 @@
-#ALGORITMOS DE ORDENAMIENTO
+def agregar_contacto(lista_contactos: list,nombre:str,numero:int):
 
-#numero de veces que dara la vuelta
+    contacto ={"Nombre":nombre,"Numero":numero}
+    lista_contactos.append(contacto)
 
-def bubble_sort(list):
-    for i in range(len(list)):
-    #indice que seguiremos
-    #-1 por que no queremos comprar el ultimo con nada y -i por que ya estaria ordenado lo demas
-        for j in range(len(list)-1 -i):
-            if(list[j] > list[j+1]):
-                temp = list[j]
-                list[j] = list[j+1]
-                list[j+1] = temp
-    return list 
+def eliminar_contacto(lista_contactos:list,nombre_eliminar: str):
 
 
+    for i in range(len(lista_contactos)):
+        
+        #si en la posicion que va en la clave nombre es igual
+        if nombre_eliminar == lista_contactos[i]["Nombre"]:
+            #eliminar el numero 
+            lista_contactos.pop(i)
 
-def insertion_sort(list):
+            return 1
+    return 0
+
+def mostrar_lista(lista_contactos:list):
+    print("\nNombre ----- Numero\n")
+
+    for i in range(len(lista_contactos)):
+
+
+        print(lista_contactos[i]["Nombre"] , lista_contactos[i]["Numero"])
+
+
+def buscar_contacto(Lista_contactos: list, nombre: str):
+
+    for i in range(len(Lista_contactos)):
+        if Lista_contactos[i]["Nombre"] == nombre:
+            return 1
+    return -1
+
+
+def editar_contacto(lista_contactos:list,contacto:str):
+
+  
+        for i in range(len(lista_contactos)):
+            if(lista_contactos[i]["Nombre"] == contacto):
+                nuevo_numero = int(input("\nIntroduzca el nuevo numero de contacto: "))
+                lista_contactos[i]["Numero"] = nuevo_numero
+                return 1
+        return 0
+                    
+         
+
 
     
-    for i in range(1,len(list)):
-
-        actual = list[i]
-        anterior_ordenado= i-1
-
-        while anterior_ordenado >= 0 and list[anterior_ordenado] > actual:
-            list[anterior_ordenado+1] = list[anterior_ordenado]
-            anterior_ordenado -= 1
-            list[anterior_ordenado + 1] = actual
-    return list
-            
-
-
