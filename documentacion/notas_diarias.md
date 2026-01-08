@@ -15,3 +15,9 @@ segundo dia empezamos a entender los fundamentales de SQl como funciona y como s
 
 aprendimos ademas statemnets basicos de SQL y usar el workbench mejor 
 
+    5/1/2026
+empezamos aprendiendo ma ssobre dicersas estructuras de datos de python
+empezamos el primer proyecto basico
+
+
+

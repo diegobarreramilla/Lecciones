@@ -1,7 +1,11 @@
 def agregar_contacto(lista_contactos: list,nombre:str,numero:int):
 
-    contacto ={"Nombre":nombre,"Numero":numero}
-    lista_contactos.append(contacto)
+
+    if existe_contacto(lista_contactos,nombre,numero) == 0:
+        contacto ={"Nombre":nombre,"Numero":numero}
+        lista_contactos.append(contacto)
+    else:
+        print("\nEL contacto ya existe\n")
 
 def eliminar_contacto(lista_contactos:list,nombre_eliminar: str):
 
@@ -19,10 +23,11 @@ def eliminar_contacto(lista_contactos:list,nombre_eliminar: str):
 def mostrar_lista(lista_contactos:list):
     print("\nNombre ----- Numero\n")
 
-    for i in range(len(lista_contactos)):
+    for contacto in lista_contactos:
 
 
-        print(lista_contactos[i]["Nombre"] , lista_contactos[i]["Numero"])
+        print(contacto["Nombre"] , contacto["Numero"])
+    print("\n")
 
 
 def buscar_contacto(Lista_contactos: list, nombre: str):
@@ -43,7 +48,12 @@ def editar_contacto(lista_contactos:list,contacto:str):
                 return 1
         return 0
                     
-         
+def existe_contacto(lista_contactos: list,nombre:str,numero:int):
+
+    for i in range(len(lista_contactos)):
+        if nombre == lista_contactos[i]["Nombre"] or numero == lista_contactos[i]["Numero"]:
+            return 1
+    return 0     
 
 
     

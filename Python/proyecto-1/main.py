@@ -31,9 +31,9 @@ while True:
         contacto_eliminar = input("Introduzca el nombre del contacto que desee eliminar: ")
 
         if funciones.eliminar_contacto(lista_contactos,contacto_eliminar) == 1:
-            print("Se elimino corectamente el contacto");
+            print("\nSe elimino corectamente el contacto\n");
         else:
-            print("El contacto no existe")
+            print("\nEl contacto no existe\n")
 
     if opc == 3:
         funciones.mostrar_lista(lista_contactos)
