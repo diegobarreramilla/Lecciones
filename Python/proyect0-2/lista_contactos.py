@@ -2,13 +2,14 @@
 import contacto
 
 class ListaContactos:
-
+    #esta clase en si solo es una lista
     def __init__(self):
         self.lista = []
 
-
+    #agregramos al final el nuevo contacto
     def agregar_contacto_lista(self,contacto:contacto):
         self.lista.append(contacto)
+
 
     def buscar_contacto(self,nombre:str):
 
@@ -37,4 +38,8 @@ class ListaContactos:
                 print(i+1,contacto )
         else:
             return None
+        
+    def num_contactos(self):
+
+        return len(self.lista)
         
